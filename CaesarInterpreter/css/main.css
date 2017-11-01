@@ -5,6 +5,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .container {
@@ -16,8 +17,8 @@ body {
     "radio-right"
     "input"
     "output"
-    "button";
-    grid-column-gap: 10px;
+    "button"; 
+    grid-row-gap: 15px;
 }
 
 textarea {
@@ -49,6 +50,10 @@ button {
     grid-area: radio-right;
     display: flex;
     flex-direction: row;
+}
+
+form {
+    font-size: 18px;
 }
 
 .slider {
@@ -102,5 +107,7 @@ button {
         grid-template-areas:
         "radio-left radio-right"
         "input output";
+        grid-column-gap: 10px;
+        grid-row-gap: 0;
     }
 }
