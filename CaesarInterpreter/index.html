@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="caesarApp" ng-cloak>
+    <head>
+        <title>Caesar Interpreter</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="js/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="container" ng-controller="MainController">
+            <textarea class="input" rows="5" ng-model="input" ng-change="output = encrypt(input)"></textarea>
+            <textarea class="output" rows="5" ng-model="output"></textarea>
+            <p class="radio-left"></p>
+            <input class="radio-right" ng-model="crypticValue" ng-change="updateValue()" />
+            <p>{{output}}</p>
+        </div>
+
+        <script src="js/angular.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

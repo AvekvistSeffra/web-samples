@@ -1,0 +1,61 @@
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 10px;
+    padding: 5px;
+    display: grid;
+    grid-template-areas: 
+    "radio-left"
+    "radio-right"
+    "input"
+    "output"
+    "button";
+    grid-gap: 10px;
+}
+
+textarea {
+    padding: 5px;
+    font-size: 18px;
+    resize: none;
+}
+
+.input {
+    grid-area: input;
+}
+
+.output {
+    grid-area: output;
+}
+
+button {
+    grid-area: button;
+    padding: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.radio-left {
+    grid-area: radio-left;
+}
+
+.radio-right {
+    grid-area: radio-right;
+    padding: 5px;
+    font-size: 18px;
+    text-align: right;
+}
+
+@media (min-width: 990px) {
+    .container {
+        grid-template-areas:
+        "radio-left radio-right"
+        "input output";
+    }
+}
