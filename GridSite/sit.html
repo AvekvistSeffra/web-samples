@@ -1,0 +1,41 @@
+<html>
+        <head>
+            <title>Mobile-first Grid Site</title>
+            <link rel="stylesheet" type="text/css" href="css/main.css" />
+            <script src="js/jquery.min.js"></script>
+        </head>
+        <body>
+            <div class="container">
+                <nav>
+                    <div class="list">
+                        <a href="index.html">Lorem</a>
+                        <a href="ipsum.html">Ipsum</a>
+                        <a href="dolor.html">Dolor</a>
+                        <div class="right">
+                            <a href="sit.html">Sit</a>
+                            <a href="amet.html">Amet</a>
+                        </div>
+                    </div>
+                    <div class="handle">Main</div>
+                    <script>
+                        $('.handle').on('click', function() {
+                            $('.list').toggleClass('showing');
+                        });
+                    </script>
+                </nav>
+                <main>
+                    <form>
+                        <h2>Contact</h2>
+                        <p>Full name: </p><input type="text" name="name" />
+                        <p>Email address: </p><input type="text" name="email" />
+                        <p>Message: </p><textarea cols="45" rows="8"></textarea>
+                        <input type="submit" value="Submit" />
+                    </form>
+                </main>
+                <footer>
+                    <p>Copyright Hampus Avekvist 2017</p>
+                </footer>
+            </div>
+        </body>
+    </html>
+    

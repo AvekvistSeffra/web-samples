@@ -1,0 +1,258 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "aside"
+    "footer";
+    text-align: center;
+}
+
+header {
+    grid-area: header;
+    background-color: #444444;
+    color: #e4e4e4;
+}
+
+header h2 {
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+header button {
+    margin-bottom: 10px;
+    padding: 20px 25px;
+    border: none;
+    background-color: #6dc96d;
+    font-size: 24px;
+}
+
+header button:hover {
+    background-color: #749c74;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #f9f9f9;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.list a, .handle {
+    font-size: 32px;
+}
+
+.list a {
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.handle {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.list a:hover, .handle:hover {
+    background-color: #f0f0f0;
+}
+
+.showing {
+    display: flex;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form h2 {
+    margin-bottom: 0;
+}
+
+form input {
+    border: none;
+}
+
+form input[type=text] {
+    border: 1px solid grey;
+    font-size: 16px;
+    padding: 8px;
+}
+
+textarea {
+    resize: none;
+    font-size: 16px;
+    padding: 8px;
+}
+
+form input[type=submit] {
+    background-color: #6dc96d;
+    padding: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+form input[type=submit]:hover {
+    background-color: #749c74;
+}
+
+.material-card {
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2), 0 4px 16px rgba(0, 0, 0, 0.19);
+}
+
+.material-card h2 {
+    padding: 8px;
+    margin-bottom: 0;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.4), 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.material-card p {
+    margin-top: 0;
+    padding: 8px;
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 1279px) {
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.4em;
+    }
+
+    form {
+        width: 90%;
+        margin: auto;
+    }
+
+    form input[type=text] {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    textarea {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 990px) {
+    .container {
+        grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "nav main aside"
+        "footer footer footer";
+        text-align: initial;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    main, aside {
+        margin: 8px;
+    }
+
+    footer {
+        padding: 5px 15px;
+        text-align: right;
+    }
+
+    .list {
+        display: flex;
+    }
+
+    .handle {
+        display: none;
+    }
+
+    .material-card {
+        margin: 10px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        width: 70%;
+        margin: auto;
+        text-align: initial;
+        grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "main main aside"
+        "footer footer footer";
+        box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2), 0 8px 8px rgba(0, 0, 0, 0.19);
+    }
+
+    header {
+        text-align: center;
+    }
+
+    header button {
+        padding: 10px 30px;
+        font-size: 20px;
+    }
+
+    main {
+        padding: 5px;
+    }
+
+    aside {
+        padding: 5px;
+    }
+
+    footer {
+        padding: 5px 15px;
+        text-align: right;
+    }
+
+    .list{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .list a {
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+
+    .right {
+        margin-left: auto;
+        flex-direction: row;
+    }
+
+    .handle {
+        display: none;
+    }
+}
