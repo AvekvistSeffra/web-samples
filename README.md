@@ -3,7 +3,7 @@ Feel free to use these designs (mostly) however you want but they are licensed u
 
 # Currently Available designs:
 - Grid Site - It's a simple grid-based site that is responsive for three screen sizes. 
-- Grid Site Link: https://avekvistseffra.github.io/web-samples/GridSite/
+\n Grid Site Link: https://avekvistseffra.github.io/web-samples/GridSite/
 
 # How-to
 Just download the files you want to use and you should be good to go to start editing them. 
