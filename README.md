@@ -15,6 +15,6 @@ In some cases you might need access to a MySQL-server, too. I'm going to have so
 with shopping-carts and such. 
 
 # Contact info
-Email: hampus@avekvist.com
-Phone number: (+46) 76 035 22 26 (Sweden)
-Twitter: @AvekvistSeffra
+- Email: hampus@avekvist.com
+- Phone number: (+46) 76 035 22 26 (Sweden)
+- Twitter: @AvekvistSeffra
