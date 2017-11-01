@@ -1,7 +1,7 @@
 # web-samples
 Feel free to use these designs (mostly) however you want but they are licensed under Apache License 2.0. 
 
-# Currently Available designs:
+# Currently Available designs and such:
 - Grid Site - It's a simple grid-based site that is responsive for three screen sizes.  
 Link: <a href="https://avekvistseffra.github.io/web-samples/GridSite/">https://avekvistseffra.github.io/web-samples/GridSite/</a>
 - Caesar Encryption - It's a simple interpreter for what I call Caesar Encryption. I don't know if that's the correct terminology but I use it.  
