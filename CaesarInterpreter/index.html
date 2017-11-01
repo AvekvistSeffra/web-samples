@@ -8,10 +8,11 @@
     <body>
         <div class="container" ng-controller="MainController">
             <textarea class="input" rows="5" ng-model="input" ng-change="output = encrypt(input)"></textarea>
-            <textarea class="output" rows="5" ng-model="output"></textarea>
+            <textarea class="output" rows="5" ng-model="output" ng-change="input = decrypt(output)"></textarea>
             <p class="radio-left"></p>
-            <input class="radio-right" ng-model="crypticValue" ng-change="updateValue()" />
-            <p>{{output}}</p>
+            <div id="radio-right">
+                <input type="range" min="0" max="25" ng-model="crypticValue" class="slider" id="crypt-range" ng-change="updateValue()"/><p class="slider-text">Encryption: {{crypticValue}}</p>
+            </div>
         </div>
 
         <script src="js/angular.min.js"></script>
