@@ -4,7 +4,10 @@ caesarApp.controller("MainController", function($scope) {
     $scope.testtext = "";
     $scope.swedish = false;
     $scope.english = false;
+    $scope.recent = "input";
+
     $scope.encrypt = function(message) {
+        $scope.recent = "input";
         var newMessage = "";
         for(var i = 0; i < message.length; i++) {
             for(var j = 0; j < $scope.characters; j++) {
@@ -94,6 +97,7 @@ caesarApp.controller("MainController", function($scope) {
     }
 
     $scope.decrypt = function(message) {
+        $scope.recent = "output";
         var newMessage = "";
         for(var i = 0; i < message.length; i++) {
             for(var j = 0; j < $scope.characters; j++) {
@@ -189,12 +193,18 @@ caesarApp.controller("MainController", function($scope) {
 
     $scope.updateValue = function() {
         parseInt($scope.crypticValue);
-        $scope.output = $scope.encrypt($scope.input);
+
+        if($scope.recent == "input") {
+            $scope.output = $scope.encrypt($scope.input);
+        } else if($scope.recent == "output") {
+            $scope.input = $scope.decrypt($scope.output);
+        }
     }
 
     $scope.activateEnglish = function() {
         $scope.testtext = "ENGLOSH";
         $scope.characters = 26;
+        $scope.english = true;
         $scope.swedish = false;
         $scope.lCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
                               'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
@@ -213,6 +223,7 @@ caesarApp.controller("MainController", function($scope) {
     $scope.activateSwedish = function() {
         $scope.testtext = "SWEDOSH";
         $scope.characters = 29;
+        $scope.swedish = true;
         $scope.english = false;
         $scope.lCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
                               'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',

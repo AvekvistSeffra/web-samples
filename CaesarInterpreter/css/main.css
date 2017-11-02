@@ -16,8 +16,7 @@ body {
     "radio-left"
     "radio-right"
     "input"
-    "output"
-    "button"; 
+    "output"; 
     grid-row-gap: 15px;
 }
 
@@ -35,13 +34,6 @@ textarea {
     grid-area: output;
 }
 
-button {
-    grid-area: button;
-    padding: 10px;
-    font-size: 18px;
-    text-transform: uppercase;
-}
-
 .radio-left {
     grid-area: radio-left;
 }
@@ -53,7 +45,7 @@ button {
 }
 
 form {
-    font-size: 18px;
+    font-size: 28px;
 }
 
 .slider {
@@ -103,6 +95,18 @@ form {
 }
 
 @media (min-width: 990px) {
+    h2 {
+        font-size: 24px;
+    }
+
+    textarea {
+        font-size: 18px;
+    }
+
+    form {
+        font-size: 18px;
+    }
+
     .container {
         grid-template-areas:
         "radio-left radio-right"
