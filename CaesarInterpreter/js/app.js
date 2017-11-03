@@ -2,8 +2,8 @@ var caesarApp = angular.module("caesarApp", []);
 
 caesarApp.controller("MainController", function($scope) {
     $scope.testtext = "";
-    $scope.swedish = false;
     $scope.english = false;
+    $scope.swedish = false;
     $scope.recent = "input";
 
     $scope.encrypt = function(message) {
@@ -12,7 +12,7 @@ caesarApp.controller("MainController", function($scope) {
         for(var i = 0; i < message.length; i++) {
             for(var j = 0; j < $scope.characters; j++) {
                 var letterToInsert = j + $scope.crypticValue;
-                
+
                 if(letterToInsert < 0) {
                     letterToInsert = $scope.characters + letterToInsert;
                 }
@@ -112,7 +112,7 @@ caesarApp.controller("MainController", function($scope) {
                 } else if(message[i] == $scope.sCharacters[j]) {
                     newMessage += $scope.sCharacters[letterToInsert];
                 }
-
+                
                 if($scope.swedish != false) {
                     if(message[i] == ' ' || message[i] == '?' ||
                        message[i] == '\n'|| message[i] == '.' ||
@@ -202,10 +202,10 @@ caesarApp.controller("MainController", function($scope) {
     }
 
     $scope.activateEnglish = function() {
+        $scope.swedish = false;
         $scope.testtext = "ENGLOSH";
         $scope.characters = 26;
-        $scope.english = true;
-        $scope.swedish = false;
+        $('.')
         $scope.lCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
                               'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
                               'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'A',
@@ -221,10 +221,9 @@ caesarApp.controller("MainController", function($scope) {
     }
 
     $scope.activateSwedish = function() {
+        $scope.english = false;
         $scope.testtext = "SWEDOSH";
         $scope.characters = 29;
-        $scope.swedish = true;
-        $scope.english = false;
         $scope.lCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
                               'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
                               'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Å',

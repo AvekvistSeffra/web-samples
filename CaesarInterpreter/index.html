@@ -13,11 +13,11 @@
             <textarea class="output" rows="5" ng-model="output" ng-change="input = decrypt(output)"></textarea>
             <h2 class="radio-left">Caesar Encryption</h2>
             <div id="radio-right">
-                <input type="range" min="0" max="25" ng-model="crypticValue" class="slider" id="crypt-range" ng-change="updateValue()"/><p class="slider-text">Encryption: {{crypticValue}}</p>
+                <input type="range" min="0" max="{{characters-1}}" ng-model="crypticValue" class="slider" id="crypt-range" ng-change="updateValue()" /><p class="slider-text">Encryption: {{crypticValue}}</p>
             </div>
             <form>
-                English: <input type="radio" name="language" ng-model="english" ng-change="activateEnglish()" />
-                Svenska: <input type="radio" name="language" ng-model="swedish" ng-change="activateSwedish()" />
+                English: <input type="radio" name="language" ng-model="english" value="true" ng-change="activateEnglish()" />
+                Svenska: <input type="radio" name="language" ng-model="swedish" value="true" ng-change="activateSwedish()" />
             </form>
         </div>
 
