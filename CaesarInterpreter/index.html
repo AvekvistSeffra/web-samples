@@ -16,8 +16,8 @@
                 <input type="range" min="0" max="{{characters-1}}" ng-model="crypticValue" class="slider" id="crypt-range" ng-change="updateValue()" /><p class="slider-text">Encryption: {{crypticValue}}</p>
             </div>
             <form>
-                English: <input type="radio" name="language" ng-model="english" value="true" ng-change="activateEnglish()" />
-                Svenska: <input type="radio" name="language" ng-model="swedish" value="true" ng-change="activateSwedish()" />
+                English: <input class="english" type="radio" name="language" ng-model="english" value="true" ng-change="activateEnglish()" ng-checked="true" />
+                Svenska: <input class="swedish" type="radio" name="language" ng-model="swedish" value="true" ng-change="activateSwedish()" />
             </form>
         </div>
 

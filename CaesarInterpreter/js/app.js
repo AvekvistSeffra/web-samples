@@ -205,7 +205,6 @@ caesarApp.controller("MainController", function($scope) {
         $scope.swedish = false;
         $scope.testtext = "ENGLOSH";
         $scope.characters = 26;
-        $('.')
         $scope.lCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
                               'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
                               'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'A',
@@ -218,6 +217,7 @@ caesarApp.controller("MainController", function($scope) {
                               'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
                               'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q',
                               'r', 's', 't', 'u', 'v', 'w', 'x', 'y'];
+        $scope.updateValue();
     }
 
     $scope.activateSwedish = function() {
@@ -238,6 +238,7 @@ caesarApp.controller("MainController", function($scope) {
                               'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
                               'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
                               'z', 'å', 'ä'];
+        $scope.updateValue();
     }
 
     var slider = document.getElementById("crypt-range");
@@ -245,6 +246,7 @@ caesarApp.controller("MainController", function($scope) {
         $scope.crypticValue = slider.value;
     }
 
-    $scope.output = $scope.encrypt("Encrypted Message");
     $scope.activateEnglish();
+    $scope.english = true;
+    $scope.output = $scope.encrypt("Encrypted Message");
 });
